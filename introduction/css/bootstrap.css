@@ -1,0 +1,72 @@
+body {
+    background-color: #fcfcfc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bg-bee-yellow {
+    background-color: #E1AD01 !important;
+}
+
+.text-bee-yellow {
+    color: #E1AD01 !important;
+}
+
+.bg-bee-black {
+    background-color: #111111 !important;
+}
+
+.text-bee-black {
+    color: #111111 !important;
+}
+
+.bg-bee-light {
+    background-color: #f0f0f0 !important;
+    border-top: 5px solid #E1AD01;
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+}
+
+.card {
+    border-radius: 0;
+    box-shadow: 4px 4px 0px #E1AD01;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.card-header {
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #E1AD01;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #E1AD01;
+}
+
+.border-bee-yellow {
+    border-color: #E1AD01 !important;
+}
+
+.border-bee-black {
+    border-color: #111111 !important;
+}
+
+code {
+    color: #E1AD01;
+    background-color: #111111;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.border-black {
+    border: 1px solid #000;
+}
