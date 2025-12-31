@@ -25,9 +25,15 @@ body { font-family: 'Poppins', sans-serif; background-color: var(--bg-main); ove
     gap: 2rem;
 }
 
+.hero-image-wrapper {
+    text-align: center; /* Centers the image container */
+}
+
 .huge-hero-img {
+    display: block; /* Required for margin auto */
+    margin: 0 auto; /* Centers the image horizontally */
     width: 100%;
-    max-width: 550px; /* This makes the image huge */
+    max-width: 700px; /* Increased size from 550px */
     height: auto;
     filter: drop-shadow(15px 15px 30px rgba(0,0,0,0.15));
 }
@@ -72,5 +78,5 @@ footer { text-align: center; padding: 4rem; color: #888; }
 
 @media (max-width: 800px) {
     .hero-container { grid-template-columns: 1fr; text-align: center; }
-    .huge-hero-img { max-width: 300px; }
+    .huge-hero-img { max-width: 400px; }
 }
