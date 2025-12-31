@@ -1,60 +1,53 @@
 :root {
     --jpcs-maroon: #8b2316;
-    /* Updated to a more vibrant, "Electric" Orange */
-    --jpcs-orange: #FF7A00; 
+    --jpcs-orange: #f58220;
     --jpcs-blue: #1b3664;
     --jpcs-yellow: #ffcb05;
-    /* Adding a specific bright highlight color */
-    --orange-light: #FFB347;
-    --orange-dark: #CC5500;
 }
 
-/* --- The 3D Cube Logic --- */
-.face.front {
-    background: var(--jpcs-orange);
-    transform: translateZ(50px);
-    border: 1px solid rgba(255,255,255,0.2); /* Subtle edge highlight */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+/* RESTORED FONT: Ensuring Poppins is used */
+body { font-family: 'Poppins', sans-serif; background: #fff; color: #222; overflow-x: hidden; }
+
+/* --- Background Graphics Container --- */
+.bg-graphics {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
+    background: #fdfdfd; /* Clean white background */
+    overflow: hidden;
 }
 
-/* Top Face - Now looks like it's hit by a bright studio light */
-.face.top {
-    background: var(--orange-light); 
-    transform: rotateX(90deg) translateZ(50px);
-}
-
-/* Right Face - Saturated shadow instead of a muddy one */
-.face.right {
-    background: var(--orange-dark); 
-    transform: rotateY(90deg) translateZ(50px);
-}
-
-/* --- The 3D Sphere Logic --- */
-.sphere {
+/* --- New Geometric Shape Styles --- */
+.geo-square, .geo-outline {
     position: absolute;
-    border-radius: 50%;
-    /* CHANGED: Removed maroon from the gradient. 
-       Now it glows from Light Orange to Bright Orange */
-    background: radial-gradient(circle at 30% 30%, var(--orange-light), var(--jpcs-orange));
-    /* Softer, more modern shadow */
-    box-shadow: 15px 15px 40px rgba(255, 122, 0, 0.2);
-    z-index: -1; /* Ensures it stays behind your text */
 }
 
-/* --- Adjusting positions for better visibility --- */
-.pos-3 { 
-    top: 35%; 
-    right: 12%; 
-    width: 140px; 
-    height: 140px; 
-    opacity: 0.8; /* Makes it look "glassy" and less heavy */
+/* Solid, semi-transparent squares */
+.geo-square {
+    background: var(--jpcs-orange);
+    opacity: 0.5; /* Base opacity for layering */
 }
 
-.pos-4 { 
-    bottom: 5%; 
-    left: 5%; 
-    background: radial-gradient(circle at 30% 30%, #fff4e6, var(--orange-light));
-    opacity: 0.6; 
+/* Wireframe outline squares */
+.geo-outline {
+    background: transparent;
+    border: 2px solid rgba(245, 130, 32, 0.6); /* Orange outline with transparency */
 }
+
+/* --- Positioning & Sizing the Shapes --- */
+/* Top Right Cluster */
+.sq-1 { top: -80px; right: 50px; width: 200px; height: 200px; opacity: 0.3; }
+.sq-2 { top: 40px; right: -40px; width: 150px; height: 150px; border-color: rgba(255,255,255,0.7); } /* White outline */
+.sq-3 { top: 20px; right: 80px; width: 120px; height: 120px; background: #ff9e4f; opacity: 0.6; } /* Lighter orange */
+.sq-4 { top: 150px; right: -20px; width: 80px; height: 80px; opacity: 0.7; }
+.sq-5 { top: 100px; right: 180px; width: 100px; height: 100px; }
+
+/* Bottom Right Cluster */
+.sq-6 { bottom: -50px; right: 10%; width: 180px; height: 180px; opacity: 0.2; }
+.sq-7 { bottom: 80px; right: -30px; width: 130px; height: 130px; }
+
 
 /* --- Responsive Hero Section --- */
 .hero-section {
@@ -82,11 +75,12 @@
 }
 
 .hero-image {
-    width: 100%;             
+    width: 100%;            
     max-width: 450px;       
     height: 70vh;           
     object-fit: contain;    
-    filter: drop-shadow(30px 30px 50px rgba(0,0,0,0.2));
+    /* Changed shadow to orange to match the new theme */
+    filter: drop-shadow(30px 30px 50px rgba(245, 130, 32, 0.2));
     display: block;         
 }
 
@@ -127,8 +121,8 @@ footer { text-align: center; padding: 60px; color: #666; font-weight: bold; }
     }
     .image-area { justify-content: center; }
     .hero-image { 
-        max-height: 40vh; /* Shorter height for mobile screens */
-        max-width: 300px; /* Smaller width for mobile */
+        max-height: 40vh;
+        max-width: 300px;
     }
     .main-title { font-size: 3rem; }
 }
