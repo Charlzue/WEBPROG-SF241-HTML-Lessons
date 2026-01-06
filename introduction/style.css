@@ -77,6 +77,16 @@ body {
 /* =========================
    HERO / ABOUT
 ========================= */
+
+.hero-card {
+    padding: 40px !important; 
+    border-left: 6px solid var(--jpcs-orange); 
+    background: rgba(255, 255, 255, 0.95); /* Makes the white box */
+    backdrop-filter: blur(5px); /* Modern frosted effect */
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
+}
+
 .toph-section {
     min-height: 85vh;
     display: flex;
@@ -138,20 +148,29 @@ body {
     margin-bottom: 35px;
 }
 
+.tracking-wider {
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+}
+
 /* =========================
    CARDS
 ========================= */
 .toph-card {
-    background: #fff;
+    background: #f0f4f8;
     padding: 30px;
     border-radius: 20px;
-    border: 1px solid rgba(139, 35, 22, 0.1); /* Very faint maroon border */
-    box-shadow: 0 10px 40px rgba(139, 35, 22, 0.08); /* Maroon-tinted shadow */
+    /* No border, just a soft, colored shadow */
+    border: none; 
+    box-shadow: 0 4px 15px rgba(27, 54, 100, 0.08);
     height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .toph-card:hover {
-    transform: translateY(-5px); /* Adds a nice "lift" when you hover */
+    /* Lift the card and make the shadow slightly more prominent on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(245, 130, 32, 0.15);
 }
 
 /* =========================
@@ -165,23 +184,24 @@ body {
 }
 
 .hobby-pill {
-    background: #fff;
-    padding: 10px 22px;
+    background: #f0f4f8;
+    padding: 12px 24px;
     border-radius: 50px;
     font-weight: 600;
     font-size: 0.95rem;
     color: var(--jpcs-blue);
-    border: 1.5px solid #eee;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    /* No border, soft shadow */
+    border: none;
+    box-shadow: 0 4px 15px rgba(27, 54, 100, 0.08);
     transition: all 0.3s ease;
     cursor: default;
 }
 
 .hobby-pill:hover {
-    border-color: var(--jpcs-orange);
+    /* On hover, add a subtle text color change and lift */
     color: var(--jpcs-orange);
     transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(245, 130, 32, 0.15);
+    box-shadow: 0 8px 25px rgba(245, 130, 32, 0.2);
 }
 
 /* =========================
@@ -197,10 +217,31 @@ body {
 .goal-tile {
     background: #fff;
     padding: 20px 25px;
-    border-radius: 20px;
-    border: 1px solid rgba(245, 130, 32, 0.1); /* Very faint orange border */
-    box-shadow: 0 10px 30px rgba(245, 130, 32, 0.1); /* Orange-tinted shadow */
+    border-radius: 16px;
+    /* No border, soft shadow */
+    border: none;
+    box-shadow: 0 8px 25px rgba(245, 130, 32, 0.08);
     margin-bottom: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.goal-tile:hover {
+    /* Lift and brighten shadow on hover */
+    transform: translateX(5px);
+    box-shadow: 0 12px 35px rgba(245, 130, 32, 0.12);
+}
+
+/* Career & Tech tiles: Light Blue Tint */
+.career-goal {
+    background: #f0f4f8; 
+    box-shadow: 0 4px 15px rgba(27, 54, 100, 0.08);
+}
+
+/* Personal & Family tiles: Light Peach Tint */
+.personal-goal {
+    background: #f0f4f8;
+    box-shadow: 0 4px 15px rgba(27, 54, 100, 0.08);
 }
 
 /* =========================
