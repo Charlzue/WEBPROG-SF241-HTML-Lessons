@@ -1,76 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charl Christopher M. Peñada | JPCS-APC President</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charl Christopher M. Peñada | Portfolio</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- BACKGROUND SHAPES (UNCHANGED) -->
 <div class="bg-graphics">
-    <div class="geo-square sq-1"></div>
-    <div class="geo-outline sq-2"></div>
-    <div class="geo-square sq-3"></div>
-    <div class="geo-square sq-4"></div>
-    <div class="geo-outline sq-5"></div>
-
-    <div class="geo-square sq-6"></div>
-    <div class="geo-outline sq-7"></div>
+<div class="geo-square sq-1"></div><div class="geo-outline sq-2"></div>
+<div class="geo-square sq-3"></div><div class="geo-square sq-4"></div>
+<div class="geo-outline sq-5"></div><div class="geo-square sq-6"></div>
+<div class="geo-outline sq-7"></div><div class="geo-square sq-8"></div>
+<div class="geo-outline sq-9"></div><div class="geo-square sq-10"></div>
+<div class="geo-outline sq-11"></div><div class="geo-square sq-12"></div>
+<div class="geo-outline sq-13"></div>
 </div>
 
-<header class="hero-section">
-    <div class="hero-container">
-        <div class="image-area">
-            <img src="toph.png" alt="Toph" class="hero-image">
-        </div>
-        <div class="text-area">
-            <h1 class="main-title">Hello, I'm <span class="accent-orange">Toph</span>!</h1>
-            <h2 class="sub-title">Charl Christopher M. Peñada</h2>
-            <p class="description">
-                I am a <strong>BS Computer Science</strong> student specializing in <strong>Cybersecurity & Forensics</strong> at Asia Pacific College. 
-                As the <strong>Chapter President of JPCS-APC</strong>, I lead our community in fostering tech excellence.
-            </p>
-            <div class="scroll-prompt">Scroll for details ↓</div>
-        </div>
-    </div>
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+<div class="container">
+<a class="navbar-brand fw-bold" href="#about">TOPH</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tophNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="tophNav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+<li class="nav-item"><a class="nav-link" href="#experience">IT Experience</a></li>
+<li class="nav-item"><a class="nav-link" href="#organizations">Organizations</a></li>
+<li class="nav-item"><a class="nav-link" href="#hobbies">Hobbies</a></li>
+<li class="nav-item"><a class="nav-link" href="#goals">Goals</a></li>
+<li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- ABOUT ME -->
+<header id="about" class="toph-section">
+<div class="toph-container">
+<img src="toph.png" class="toph-portrait" alt="Toph">
+<div>
+<h1 class="main-title">Hello, I'm <span class="accent-orange">Toph</span>!</h1>
+<h2 class="sub-title">Charl Christopher M. Peñada</h2>
+
+<p class="description">
+Currently a Computer Science student at Asia Pacific College specializing in Cybersecurity and Forensics, I focus on the vital intersection of technical innovation and strategic leadership. As the President of JPCS-APC, I have established myself as a resilient leader dedicated to executing high-quality initiatives for both the Asia Pacific College and tech community.
+</p>
+
+<p class="description">
+I am eager to connect with like-minded professionals to explore tech leadership opportunities, a journey I am proud to share alongside my fiancé, Angelo Laus.
+</p>
+
+<div class="toph-socials">
+<a href="https://www.linkedin.com/in/charlchristopher/" target="_blank" class="btn btn-dark btn-sm">LinkedIn</a>
+<a href="https://www.facebook.com/profile.php?id=61564078963901" target="_blank" class="btn btn-dark btn-sm">Facebook</a>
+<a href="https://www.instagram.com/charl_christopher/" target="_blank" class="btn btn-dark btn-sm">Instagram</a>
+</div>
+</div>
+</div>
 </header>
 
-<div class="details-wrapper">
-    <main class="container grid">
-        <section class="info-card education">
-            <div class="accent-bar"></div>
-            <h3>🎓 Education</h3>
-            <ul>
-                <li><strong>Asia Pacific College</strong> (2024 - Present)</li>
-                <li><strong>Arellano University - JAS</strong> (2022 - 2024)</li>
-                <li><strong>Pasay City East High School</strong> (2018 - 2022)</li>
-            </ul>
-        </section>
+<main class="container">
 
-        <section class="info-card projects">
-            <div class="accent-bar"></div>
-            <h3>💻 IT Experience</h3>
-            <p><strong>CLI-Based Sustainable Recycling App</strong> (2025)</p>
-            <p><strong>Botomatiko</strong> (2023 - 2024)</p>
-        </section>
+<!-- EDUCATION -->
+<section id="education" class="details-section">
+<h3 class="section-label">🎓 Education</h3>
+<div class="row g-4">
 
-        <section class="info-card goals">
-            <div class="accent-bar"></div>
-            <h3>🎯 Life Goals</h3>
-            <p>To become financially stable and live in a peaceful country.</p>
-            <div class="hobbies">
-                <span>Data Analytics</span>
-                <span>Project Management</span>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        &copy; 2025 Charl Christopher M. Peñada | APC Student Leader
-    </footer>
+<div class="col-lg-3">
+<div class="toph-card">
+<h5>College</h5>
+<p><strong>Asia Pacific College (2024–Present)</strong></p>
+<ul>
+<li>BS Computer Science – Cybersecurity & Forensics</li>
+<li>Honor Student, 1st Year</li>
+<li>SoCIT Avatar (2024)</li>
+</ul>
+</div>
 </div>
 
+<div class="col-lg-3">
+<div class="toph-card">
+<h5>Senior High School</h5>
+<p><strong>Arellano University – JAS (2022–2024)</strong></p>
+<ul>
+<li>ICT Strand</li>
+<li>Graduated Class Rank 1, Strand Rank 1, Overall Rank 8</li>
+<li>ICT Week Quiz Bee – Champion (2023)</li>
+<li>CS/IT Quiz Bee – 6th Place (2024)</li>
+</ul>
+</div>
+</div>
+
+<div class="col-lg-3">
+<div class="toph-card">
+<h5>Junior High School</h5>
+<p><strong>Pasay City East High School (2018–2022)</strong></p>
+<ul>
+<li>Grade 7 – With Honors</li>
+<li>Grade 8 – With Honors</li>
+<li>Grade 9 – With High Honors</li>
+<li>Grade 10 – With High Honors</li>
+</ul>
+</div>
+</div>
+
+<div class="col-lg-3">
+<div class="toph-card">
+<h5>Elementary</h5>
+<p><strong>Timoteo Paez Elementary School (2012–2018)</strong></p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- IT EXPERIENCE -->
+<section id="experience" class="details-section">
+    <h3 class="section-label">💻 IT Experience</h3>
+    <div class="row g-4">
+
+        <div class="col-md-5">
+            <div class="toph-card">
+                <h5 class="fw-bold mb-3">Technical</h5> <p>Languages: Python, JavaScript, SQL, HTML, CSS</p>
+                <p>Databases: MySQL, Firebase</p>
+                <p>Tools: GitHub, VS Code, Frappe</p>
+                <p>Creative: Canva, Figma</p>
+                <p>AI: Google Gemini, ChatGPT</p>
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <div class="toph-card">
+                <h5 class="fw-bold mb-3">Projects</h5> <p class="text-uppercase small tracking-wider text-secondary mb-2">Client-Based</p>
+                <ul class="mb-4">
+                    <li>Arise PH (2025) – Quality Assurance Tester</li>
+                </ul>
+
+                <p class="text-uppercase small tracking-wider text-secondary mb-2">Academic</p>
+                <ul>
+                    <li>Personal Website (2025) – Programmer & UI/UX Designer</li>
+                    <li>SteveJobs (2025) – Quality Assurance Tester</li>
+                    <li>Consumission (2025) – QA Tester & UI Designer</li>
+                    <li>BotoMatiko (2023–2024) – Project Manager, UI/UX Designer, QA</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ORGANIZATIONS -->
+<section id="organizations" class="details-section">
+    <h3 class="section-label">🤝 Organizations</h3>
+
+    <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+            <div class="toph-card">
+                <h5><strong>Junior Philippine Computer Society – APC</strong></h5>
+                <ul>
+                    <li>Chapter President (2025–Present)</li>
+                    <li>Director of External Relations (2024–2025)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="toph-card">
+                <h5><strong>CyberPH</strong></h5>
+                <ul>
+                    <li>Assistant Vice President – External Growth & Expansion (2025–Present)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="toph-card">
+                <h5><strong>APC – Microsoft Community</strong></h5>
+                <ul>
+                    <li>Consultant (2025–Present)</li>
+                    <li>Documentation Associate (2024–2025)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="toph-card">
+                <h5><strong>JISSA – APC</strong></h5>
+                <ul>
+                    <li>Consultant (2025–Present)</li>
+                    <li>Secretariat Associate (2024–2025)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="toph-card">
+                <h5><strong>APC – Gaming Genesis</strong></h5>
+                <ul>
+                    <li>Consultant (2025–Present)</li>
+                    <li>Secretary Associate (2024–2025)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="toph-card">
+                <h5><strong>ICT Club – Arellano University JAS</strong></h5>
+                <ul>
+                    <li>President (2023–2024)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="toph-card">
+                <h5><strong>APC – Pet Society</strong></h5>
+                <ul>
+                    <li>Member (2025–Present)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- HOBBIES -->
+<section id="hobbies" class="details-section">
+    <h3 class="section-label">✨ Hobbies</h3>
+    <div class="hobbies-wrap">
+        <span class="hobby-pill">📢 Student Leadership</span>
+        <span class="hobby-pill">🤝 Events Volunteering</span>
+        <span class="hobby-pill">💻 Tech & Leadership Events</span>
+        <span class="hobby-pill">👕 Thrifting</span>
+        <span class="hobby-pill">🎬 Movies & Series</span>
+        <span class="hobby-pill">🚶 Walking</span>
+    </div>
+</section>
+
+<!-- GOALS -->
+<section id="goals" class="details-section">
+    <h3 class="section-label">🎯 Goals</h3>
+    <div class="row g-4">
+        <div class="col-md-6">
+            <h4 class="category-title"><span class="accent-blue">🚀</span> Career & Tech</h4>
+            <div class="goal-tile">Be a Data Scientist or Project Manager</div>
+            <div class="goal-tile">Build communities in tech and leadership</div>
+            <div class="goal-tile">Land a comfortable, well-paying job</div>
+            <div class="goal-tile">Be financially stable and disciplined</div>
+            <div class="goal-tile">Build a small business out of my hobby</div>
+        </div>
+
+        <div class="col-md-6">
+            <h4 class="category-title"><span class="accent-orange">🏠</span> Personal & Family</h4>
+            <div class="goal-tile">Marry Angelo Laus</div>
+            <div class="goal-tile">Have a family, kids, and furbabies</div>
+            <div class="goal-tile">Live in a house I have in my mind</div>
+            <div class="goal-tile">Travel around the world</div>
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="details-section pb-5">
+    <h3 class="section-label">📸 Gallery</h3>
+    <div class="collage-grid">
+        <img src="college_circle.jpg" class="featured"> <img src="charlgelo.jpg" class="r45"> <img src="jpcs-1.jpg" class="r169"> <img src="toph-2.jpg" class="r34"> <img src="jpcs-2.jpg" class="r21">
+        <img src="charlgelo-1.jpg" class="r43">
+        
+        <img src="jhs_circle.jpg" class="r43">
+        <img src="shs_circle.jpg" class="r32">
+        <img src="jpcs.jpg" class="featured"> <img src="socit.jpg" class="r32">
+        <img src="charlgelo-2.jpg" class="r32">
+        <img src="toph-1.jpg" class="r32">
+        <img src="toph-4.jpg" class="r34">
+    </div>
+</section>
+
+</main>
+
+<footer class="text-center py-5 border-top">
+    <a href="https://docs.google.com/document/d/1m7ysriZaP5wH4BobJH__W5WlqaFE7K2hT3K-bvIZdFE/edit?usp=sharing" 
+       target="_blank" 
+       class="footer-link">
+       Personal Website References
+    </a>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

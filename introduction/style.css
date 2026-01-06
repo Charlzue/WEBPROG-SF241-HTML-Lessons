@@ -2,127 +2,280 @@
     --jpcs-maroon: #8b2316;
     --jpcs-orange: #f58220;
     --jpcs-blue: #1b3664;
-    --jpcs-yellow: #ffcb05;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-/* RESTORED FONT: Ensuring Poppins is used */
-body { font-family: 'Poppins', sans-serif; background: #fff; color: #222; overflow-x: hidden; }
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* --- Background Graphics Container --- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+    color: #222;
+    overflow-x: hidden;
+}
+
+/* =========================
+   BACKGROUND GRAPHICS
+========================= */
 .bg-graphics {
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
+    inset: 0;
     z-index: -1;
-    background: #fdfdfd; /* Clean white background */
-    overflow: hidden;
+    background: #fdfdfd;
 }
 
-/* --- New Geometric Shape Styles --- */
-.geo-square, .geo-outline {
-    position: absolute;
-}
-
-/* Solid, semi-transparent squares */
 .geo-square {
+    position: absolute;
     background: var(--jpcs-orange);
-    opacity: 0.5; /* Base opacity for layering */
+    opacity: 0.45;
 }
 
-/* Wireframe outline squares */
 .geo-outline {
-    background: transparent;
-    border: 2px solid rgba(245, 130, 32, 0.6); /* Orange outline with transparency */
+    position: absolute;
+    border: 2px solid rgba(245, 130, 32, 0.6);
 }
 
-/* --- Positioning & Sizing the Shapes --- */
-/* Top Right Cluster */
+/* RIGHT SIDE */
 .sq-1 { top: -80px; right: 50px; width: 200px; height: 200px; opacity: 0.3; }
-.sq-2 { top: 40px; right: -40px; width: 150px; height: 150px; border-color: rgba(255,255,255,0.7); } /* White outline */
-.sq-3 { top: 20px; right: 80px; width: 120px; height: 120px; background: #ff9e4f; opacity: 0.6; } /* Lighter orange */
-.sq-4 { top: 150px; right: -20px; width: 80px; height: 80px; opacity: 0.7; }
+.sq-2 { top: 40px; right: -40px; width: 150px; height: 150px; }
+.sq-3 { top: 20px; right: 80px; width: 120px; height: 120px; }
+.sq-4 { top: 150px; right: -20px; width: 80px; height: 80px; }
 .sq-5 { top: 100px; right: 180px; width: 100px; height: 100px; }
 
-/* Bottom Right Cluster */
-.sq-6 { bottom: -50px; right: 10%; width: 180px; height: 180px; opacity: 0.2; }
+/* BOTTOM RIGHT */
+.sq-6 { bottom: -50px; right: 10%; width: 180px; height: 180px; opacity: 0.25; }
 .sq-7 { bottom: 80px; right: -30px; width: 130px; height: 130px; }
 
+/* LEFT SIDE */
+.sq-8 { top: 5%; left: -80px; width: 220px; height: 220px; opacity: 0.25; }
+.sq-9 { top: 15%; left: 60px; width: 120px; height: 120px; }
+.sq-10 { bottom: 15%; left: -40px; width: 160px; height: 160px; }
+.sq-11 { bottom: 8%; left: 100px; width: 90px; height: 90px; }
+.sq-12 { top: 25%; left: -20px; width: 70px; height: 70px; }
+.sq-13 { bottom: -20px; left: 20px; width: 200px; height: 200px; }
 
-/* --- Responsive Hero Section --- */
-.hero-section {
-    height: 100vh;
+/* =========================
+   NAVBAR
+========================= */
+.navbar-brand {
+    font-weight: 800;
+    color: var(--jpcs-blue);
+}
+
+.nav-link {
+    font-weight: 500;
+}
+
+/* =========================
+   HERO / ABOUT
+========================= */
+.toph-section {
+    min-height: 85vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 0 5%;
+    padding: 100px 5%;
 }
 
-.hero-container {
+.toph-container {
+    max-width: 1200px;
+    margin: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 50px;
-    max-width: 1300px;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+}
+
+.toph-portrait {
+    max-width: 450px;
     width: 100%;
+    filter: drop-shadow(30px 30px 50px rgba(245, 130, 32, 0.15));
 }
 
-.image-area { 
-    display: flex; 
-    justify-content: center; 
-    align-items: center;   
-    overflow: hidden;        
+.main-title {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--jpcs-blue);
 }
 
-.hero-image {
-    width: 100%;            
-    max-width: 450px;       
-    height: 70vh;           
-    object-fit: contain;    
-    /* Changed shadow to orange to match the new theme */
-    filter: drop-shadow(30px 30px 50px rgba(245, 130, 32, 0.2));
-    display: block;         
+.accent-orange {
+    color: var(--jpcs-orange);
 }
 
-.main-title { font-size: 4.5rem; color: var(--jpcs-blue); line-height: 1; font-weight: 800; }
-.accent-orange { color: var(--jpcs-orange); }
-.sub-title { font-size: 2rem; color: var(--jpcs-maroon); margin: 15px 0; }
-.description { font-size: 1.1rem; line-height: 1.7; color: #444; }
-
-.scroll-prompt { margin-top: 40px; font-weight: bold; color: var(--jpcs-orange); animation: bounce 2s infinite; }
-@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
-
-/* --- Content Cards --- */
-.details-wrapper { padding: 80px 0; position: relative; }
-.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-
-.info-card {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 40px;
-    border-radius: 35px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
-    position: relative;
-    overflow: hidden;
-    backdrop-filter: blur(10px);
+.sub-title {
+    font-size: 1.8rem;
+    color: var(--jpcs-maroon);
+    margin: 15px 0;
 }
 
-.accent-bar { position: absolute; top: 0; left: 0; width: 100%; height: 12px; background: linear-gradient(to right, var(--jpcs-maroon), var(--jpcs-orange)); }
-.info-card h3 { color: var(--jpcs-maroon); margin-bottom: 20px; text-transform: uppercase; }
+.description {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
 
-.hobbies span { background: #eee; padding: 8px 18px; border-radius: 25px; font-size: 0.9rem; margin: 5px; display: inline-block; }
-footer { text-align: center; padding: 60px; color: #666; font-weight: bold; }
+.toph-socials a {
+    margin-right: 8px;
+}
 
-@media (max-width: 1000px) {
-    .hero-container { 
-        grid-template-columns: 1fr; 
-        text-align: center; 
-        gap: 20px; 
+/* =========================
+   SECTIONS
+========================= */
+.details-section {
+    padding: 60px 0;
+}
+
+.section-label {
+    border-left: 6px solid var(--jpcs-orange);
+    padding-left: 15px;
+    font-weight: 700;
+    color: var(--jpcs-blue);
+    margin-bottom: 35px;
+}
+
+/* =========================
+   CARDS
+========================= */
+.toph-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(139, 35, 22, 0.1); /* Very faint maroon border */
+    box-shadow: 0 10px 40px rgba(139, 35, 22, 0.08); /* Maroon-tinted shadow */
+    height: 100%;
+}
+
+.toph-card:hover {
+    transform: translateY(-5px); /* Adds a nice "lift" when you hover */
+}
+
+/* =========================
+   HOBBIES (PILL STYLE)
+========================= */
+.hobbies-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.hobby-pill {
+    background: #fff;
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--jpcs-blue);
+    border: 1.5px solid #eee;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.hobby-pill:hover {
+    border-color: var(--jpcs-orange);
+    color: var(--jpcs-orange);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(245, 130, 32, 0.15);
+}
+
+/* =========================
+   GOALS (CATEGORIZED)
+========================= */
+.category-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--jpcs-blue);
+}
+
+.goal-tile {
+    background: #fff;
+    padding: 20px 25px;
+    border-radius: 20px;
+    border: 1px solid rgba(245, 130, 32, 0.1); /* Very faint orange border */
+    box-shadow: 0 10px 30px rgba(245, 130, 32, 0.1); /* Orange-tinted shadow */
+    margin-bottom: 15px;
+}
+
+/* =========================
+   GALLERY / COLLAGE (FIXED)
+========================= */
+.collage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: 180px; 
+    grid-auto-flow: dense; /* Fills gaps automatically */
+    gap: 16px;
+}
+
+.collage-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* No more white bars! */
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collage-grid img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(245, 130, 32, 0.2);
+    z-index: 10;
+}
+
+/* RATIO CLASSES */
+.r34, .r45 { grid-row: span 2; }
+.r43, .r32 { grid-column: span 2; }
+.r169, .r21 { grid-column: span 2; }
+.featured { grid-column: span 2; grid-row: span 2; }
+
+/* Remove the .contain class properties as object-fit: cover looks better in grids */
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.footer-link {
+    color: #555; /* Matches your current footer color */
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--jpcs-orange); /* Turns orange when you hover */
+    text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 991px) {
+    .toph-container {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
-    .image-area { justify-content: center; }
-    .hero-image { 
-        max-height: 40vh;
-        max-width: 300px;
+
+    .main-title {
+        font-size: 2.8rem;
     }
-    .main-title { font-size: 3rem; }
+
+    .goals-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .collage-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
