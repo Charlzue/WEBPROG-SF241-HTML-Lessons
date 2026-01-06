@@ -129,8 +129,16 @@ body {
     line-height: 1.7;
 }
 
+.toph-socials {
+    display: flex;
+    flex-wrap: wrap; /* Allows buttons to move to the next line */
+    gap: 10px;       /* Adds equal space between buttons */
+    margin-top: 20px;
+}
+
 .toph-socials a {
-    margin-right: 8px;
+    margin-right: 0; /* Removing old margin to use 'gap' instead */
+    flex: 0 1 auto;  /* Allows them to stay their natural size */
 }
 
 /* =========================
@@ -303,6 +311,9 @@ footer {
    RESPONSIVE
 ========================= */
 @media (max-width: 991px) {
+    .toph-socials {
+        justify-content: center; /* Centers the buttons on mobile */
+    }
     .toph-container {
         grid-template-columns: 1fr;
         text-align: center;
